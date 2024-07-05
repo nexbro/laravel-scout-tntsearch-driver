@@ -237,7 +237,7 @@ class TNTSearchEngine extends Engine
             if (isset($models[$hit])) {
                 return $models[$hit]->setAttribute('__tntSearchScore__', $results['docScores'][$hit]);
             }
-        })->filter()->all());
+        })->filter()->values()->all());
     }
 
     /**
